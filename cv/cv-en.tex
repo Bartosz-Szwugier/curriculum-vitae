@@ -1,0 +1,97 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[a4paper,top=0cm,bottom=1.1cm,left=1.6cm,right=1.6cm,headheight=0pt,headsep=0pt,footskip=0pt]{geometry}
+\usepackage{xcolor,enumitem,tabularx,microtype,amssymb}
+\usepackage[hidelinks,unicode]{hyperref}
+
+\definecolor{ink}{HTML}{0B0B0F}
+\definecolor{gold}{HTML}{E6C700}
+\definecolor{goldtext}{HTML}{8A7600}
+\definecolor{soft}{HTML}{55554F}
+\definecolor{mist}{HTML}{C9C9C0}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedright
+\setlist[itemize]{leftmargin=1.1em,itemsep=2pt,topsep=3pt,parsep=0pt,label=\textcolor{gold}{\scriptsize$\blacksquare$}}
+
+\newcommand{\dotsep}{\hspace{0.55em}{\color{goldtext}\textbullet}\hspace{0.55em}}
+\newcommand{\hdrsep}{\hspace{0.55em}{\color{gold}\textbullet}\hspace{0.55em}}
+
+\newcommand{\cvheader}[3]{%
+  \hspace*{-1.6cm}\colorbox{ink}{\begin{minipage}[c][3.3cm][c]{\paperwidth}
+    \hspace*{1.6cm}\begin{minipage}{\dimexpr\paperwidth-3.2cm\relax}
+      {\color{white}\fontsize{25}{28}\selectfont\bfseries #1}\par\vspace{5pt}
+      {\color{gold}\fontsize{10.5}{13}\selectfont\bfseries #2}\par\vspace{7pt}
+      {\color{mist}\footnotesize #3}
+    \end{minipage}
+  \end{minipage}}\par\vspace{0.45cm}}
+
+\newcommand{\cvsection}[1]{%
+  \par\vspace{9pt}{\large\bfseries\MakeUppercase{#1}}\par\vspace{1pt}%
+  {\color{gold}\rule{\linewidth}{1.3pt}}\par\vspace{4pt}}
+
+\newcommand{\job}[3]{%
+  \vspace{3pt}{\bfseries\large #1}\hfill{\color{goldtext}\bfseries\small #3}\par
+  {\color{soft}\small #2}\par\vspace{1pt}}
+
+\newcommand{\skillrow}[2]{{\bfseries\small #1} & {\small #2}\\[2.4pt]}
+\newcommand{\lvl}[1]{{\color{soft}\scriptsize(#1)}}
+\newcommand{\lead}[1]{{\bfseries #1}}
+
+\begin{document}
+
+\cvheader{BARTOSZ SZWUGIER}
+  {SOFTWARE ENGINEER \hspace{0.4em}\textbar\hspace{0.4em} FULLSTACK, DATA ENGINEERING \& GENAI}
+  {Kraków, Poland \hdrsep +48 726 312 910 \hdrsep \href{mailto:b.szwugier@outlook.com}{b.szwugier@outlook.com} \hdrsep \href{https://www.linkedin.com/in/bartoszszwugier}{linkedin.com/in/bartoszszwugier} \hdrsep \href{https://github.com/Bartosz-Szwugier}{github.com/Bartosz-Szwugier}}
+
+\cvsection{Professional Profile}
+Software Engineer with 2+ years of experience in fullstack web development, data engineering and GenAI. Focus areas: data pipelines on AWS, Grafana dashboards, AI skills, and clean, maintainable Python, JavaScript and TypeScript code.
+
+\cvsection{Professional Experience}
+\job{Associate Software Engineer}{Sii Poland, Kraków, Poland}{July 2024 -- Present}
+\begin{itemize}
+  \item \lead{Data engineering:} design and implementation of pipelines that collect, clean, transform and aggregate data from multiple sources.
+  \item \lead{Metrics \& dashboards:} Grafana dashboards presenting processed data for analysis and decision-making.
+  \item \lead{GenAI:} development of AI skills and GenAI-enabled capabilities integrated into existing workflows.
+  \item \lead{Fullstack:} web applications built with Vue, Vuex, React, Express.js, Django and FastAPI.
+  \item \lead{Cloud \& DevOps:} AWS, Docker, NGINX, GitHub, CI/CD; Python, Node.js, PostgreSQL, Celery.
+\end{itemize}
+
+\job{IT Intern}{Aptiv, Kraków, Poland}{Oct 2023 -- Nov 2023}
+\begin{itemize}
+  \item One-month internship in a professional engineering environment: corporate IT workflows and software-related tasks.
+  \item Support of assigned technical activities; teamwork, communication and problem-solving.
+\end{itemize}
+
+\cvsection{Core Skills}
+\begin{tabularx}{\linewidth}{@{}p{3.2cm}X@{}}
+  \skillrow{Languages}{Python \lvl{advanced}\dotsep JavaScript \lvl{advanced}\dotsep TypeScript \lvl{advanced}\dotsep SQL\dotsep PHP\dotsep C / C++ \lvl{improving}\dotsep Kotlin \lvl{basic}}
+  \skillrow{Data \& AI}{Data pipelines \& data engineering\dotsep Grafana\dotsep PostgreSQL\dotsep GenAI \& AI skills}
+  \skillrow{Backend}{Node.js\dotsep Express.js\dotsep Django\dotsep FastAPI\dotsep Celery}
+  \skillrow{Frontend \& Mobile}{Vue\dotsep Vuex\dotsep React\dotsep React Native\dotsep HTML5\dotsep CSS3}
+  \skillrow{Cloud \& DevOps}{AWS\dotsep Docker\dotsep NGINX\dotsep GitHub\dotsep CI/CD\dotsep Linux}
+  \skillrow{Tools \& Other}{PyCharm\dotsep Qt}
+\end{tabularx}
+
+\cvsection{Education}
+{\bfseries\large Bachelor of Science in Computer Science}\hfill{\color{goldtext}\bfseries\small 2025 -- Present}\par
+{\color{soft}\small Cracow University of Technology, Kraków, Poland}\par\vspace{4pt}
+{\bfseries\large IT Technician}\hfill{\color{goldtext}\bfseries\small 2020 -- 2025}\par
+{\color{soft}\small Zespół Szkół Łączności, Kraków -- technical secondary education}
+
+\cvsection{Certificates \& Languages}
+\begin{tabularx}{\linewidth}{@{}p{3.2cm}X@{}}
+  \skillrow{Certificates}{INF.02 -- IT administration and local network systems\dotsep INF.03 -- Web application and database development}
+  \skillrow{Languages}{English -- C1\dotsep Polish -- native}
+  \skillrow{Strengths}{Fullstack \& GenAI architecture\dotsep Automation and process improvement\dotsep Clean, maintainable code\dotsep Data visualization}
+  \skillrow{Interests}{GenAI, software development, web technologies, 3D graphics, emerging technologies, automotive technology}
+\end{tabularx}
+
+\vfill
+{\color{soft}\tiny I consent to the processing of my personal data for recruitment purposes in accordance with applicable data protection regulations.}
+\end{document}
