@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLang } from '../i18n';
 import { useActiveSection } from '../hooks';
+import { ScrambleLogo } from './ScrambleLogo';
 
 const IDS = ['about', 'experience', 'skills', 'terminal', 'contact'] as const;
 const SPY = ['top', ...IDS];
@@ -23,9 +24,7 @@ export function Header() {
       <div className="container header__inner">
         <a href="#top" className="logo" aria-label="Bartosz Szwugier — top">
           <span className="logo__mark">BS</span>
-          <span className="logo__text">
-            szwugier<span className="accent">.dev</span>
-          </span>
+          <ScrambleLogo />
         </a>
 
         <button className="burger" aria-expanded={open} aria-controls="nav" aria-label="Menu" onClick={() => setOpen((o) => !o)}>

@@ -3,17 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bartosz Szwugier — Software Engineer (Fullstack, Data & GenAI)</title>
-    <meta name="description" content="Online CV of Bartosz Szwugier — Software Engineer: fullstack (Vue, React, Node.js, Django, FastAPI), data pipelines, Grafana, AWS and GenAI. Based in Kraków, Poland." />
+    <title>Bartosz Szwugier — Software Engineer (Fullstack, Data &amp; GenAI)</title>
+    <meta name="description" content="Bartosz Szwugier — Software Engineer from Kraków, Poland. Fullstack (Vue, React, Node.js, Django, FastAPI), data engineering (pipelines, Grafana, AWS) and GenAI. Online CV." />
+    <meta name="author" content="Bartosz Szwugier" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#07070a" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Bartosz Szwugier — Software Engineer — Fullstack, Data & GenAI" />
-    <meta property="og:description" content="Interactive online CV: data pipelines, Grafana, AWS, Python, TypeScript, React, Vue, Django, FastAPI, GenAI." />
-    <meta name="twitter:card" content="summary" />
+    <link rel="canonical" href="%SITE_URL%" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Bartosz Szwugier" />
+    <meta property="og:title" content="Bartosz Szwugier — Software Engineer (Fullstack, Data &amp; GenAI)" />
+    <meta property="og:description" content="Online CV: fullstack development, data pipelines, Grafana, AWS, Python, TypeScript, React, Vue, Django, FastAPI, GenAI." />
+    <meta property="og:url" content="%SITE_URL%" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="profile:first_name" content="Bartosz" />
+    <meta property="profile:last_name" content="Szwugier" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Bartosz Szwugier — Software Engineer" />
+    <meta name="twitter:description" content="Fullstack, data engineering and GenAI. Online CV." />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Bartosz Szwugier",
+        "givenName": "Bartosz",
+        "familyName": "Szwugier",
+        "jobTitle": "Software Engineer",
+        "description": "Software Engineer with 2+ years of experience in fullstack web development, data engineering and GenAI.",
+        "url": "%SITE_URL%",
+        "sameAs": ["https://www.linkedin.com/in/bartoszszwugier", "https://github.com/Bartosz-Szwugier"],
+        "worksFor": { "@type": "Organization", "name": "Sii Poland" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Kraków", "addressCountry": "PL" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Cracow University of Technology" },
+        "knowsAbout": ["Python", "JavaScript", "TypeScript", "React", "Vue", "Node.js", "Django", "FastAPI", "AWS", "Grafana", "Data engineering", "Generative AI"]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <h1>Bartosz Szwugier</h1>
+      <p>Software Engineer from Kraków, Poland. Fullstack web development, data engineering and GenAI: Python, JavaScript, TypeScript, React, Vue, Node.js, Django, FastAPI, AWS, Grafana.</p>
+      <p><a href="https://www.linkedin.com/in/bartoszszwugier">LinkedIn</a> · <a href="https://github.com/Bartosz-Szwugier">GitHub</a></p>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
