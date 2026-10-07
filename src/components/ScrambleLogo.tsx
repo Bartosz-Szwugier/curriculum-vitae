@@ -34,6 +34,14 @@ export function ScrambleLogo() {
     });
   };
 
+  const lastMove = useRef(0);
+  const onMove = () => {
+    const now = performance.now();
+    if (now - lastMove.current < 160) return;
+    lastMove.current = now;
+    scramble();
+  };
+
   const restore = () => {
     refs.current.forEach((e) => {
       e?.style.setProperty('--dx', '0px');
@@ -42,7 +50,7 @@ export function ScrambleLogo() {
   };
 
   return (
-    <span className="scramble" aria-hidden="true" onPointerEnter={scramble} onPointerLeave={restore} onFocus={scramble} onBlur={restore}>
+    <span className="scramble" aria-hidden="true" onPointerEnter={scramble} onPointerMove={onMove} onPointerLeave={restore} onFocus={scramble} onBlur={restore}>
       {letters.map((l, i) => (
         <span
           key={i}
